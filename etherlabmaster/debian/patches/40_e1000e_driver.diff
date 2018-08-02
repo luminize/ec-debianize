@@ -1,0 +1,11 @@
+--- a/debian/rules
++++ b/debian/rules
+@@ -3,7 +3,7 @@
+ VERSION ?= $(shell dpkg-parsechangelog | sed -rne 's/^Version: ([0-9.]+(\+[0-9]*hg[0-9a-z]*)?).*$$/\1/p')
+ 
+ ifeq ($(DEB_HOST_ARCH_OS),linux)
+-	CONFFLAGS += --enable-kernel --enable-generic --enable-ccat --disable-8139too --disable-e100 --disable-e1000 --disable-e1000e --disable-r8169 --enable-sii-assign --enable-hrtimer
++	CONFFLAGS += --enable-kernel --enable-generic --enable-ccat --disable-8139too --disable-e100 --disable-e1000 --enable-e1000e --with-e1000e-kernel --disable-r8169 --enable-sii-assign --enable-hrtimer
+ endif
+ 
+ default:
