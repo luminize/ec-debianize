@@ -6,7 +6,7 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 	CONFFLAGS += --enable-kernel --enable-generic --enable-ccat \
 	    --enable-8139too --enable-e100 --enable-e1000 --enable-e1000e \
 	    --enable-r8169 --enable-igb --enable-cx2100 --enable-sii-assign \
-	    --enable-hrtimer \
+	    --enable-hrtimer --enable-debug-if --enable-debug-ring \
 	    --with-linux-dir=debian/bogus-ksrc
 endif
 
